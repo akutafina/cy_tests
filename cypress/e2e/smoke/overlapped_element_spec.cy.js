@@ -7,11 +7,7 @@ describe('Overlapped Element Specs', () => {
 
 //todo: change naming
   it('passes', () => {
-    // cy.get('#id').type('TestId0')
 
-    cy.get('#name').type('Test Name')
-
-    // cy.get('#id').invoke('val').should('eq','TestId0')
 
     cy.get('#name').invoke('val').should('eq','Test Name')
 
