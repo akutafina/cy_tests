@@ -1,28 +1,27 @@
 class VisibilityPage {
 
     static get getPageTitle() {
-        // return cy.xpath(`//h2[@name='contactme']`);
         return cy.get('h3')
     }
 
     static get getHideBtn() {
-        return cy.get('button:contains("Hide")')
+        return cy.get('#hideButton')
     }
 
     static get getRemovedBtn() {
-        return cy.get('button:contains("Removed")')
+        return cy.get('#removedButton')
     }
 
     static get getZeroWidthBtn() {
-        return cy.get('button:contains("Zero Width")')
+        return cy.get('#zeroWidthButton')
     }
 
     static get getOverlapedBtn() {
-        return cy.get('button:contains("Overlapped")')
+        return cy.get('#overlappedButton')
     }
 
     static get getOpacityZeroBtn() {
-        return cy.get('button:contains("Opacity 0")')
+        return cy.get('#transparentButton')
     }
 
     static get getHidingLayer() {
@@ -30,17 +29,15 @@ class VisibilityPage {
     }
 
     static get getVisibilityHiddenBtn() {
-        return cy.get('button:contains("Visibility Hidden")')
+        return cy.get('#invisibleButton')
     }
     static get getDisplayNoneBtn() {
-        return cy.get('button:contains("Display None")')
+        return cy.get('#notdisplayedButton')
     }
 
     static get getOffscreenBtn() {
-        return cy.get('button:contains("Offscreen")')
+        return cy.get('#offscreenButton')
     }
-
-
 
 }
 
