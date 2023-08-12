@@ -1,0 +1,10 @@
+[
+  {
+    "id" : "local",
+    "url": "http://localhost:3000"
+  },
+  {
+    "id" : "prod",
+    "url": "http://uitestingplayground.com"
+  }
+]

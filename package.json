@@ -1,11 +1,15 @@
 {
-  "name": "cognigy_tests",
+  "name": "CY Auto Tests",
   "version": "1.0.0",
   "description": "Test Automation Solution for UI Test Automation Playground",
   "main": "valid_user_credentials.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --browser chrome --headless --config video=true --reporter mochawesome --reporter-options reportDir=reports",
+    "test:smoke" :  "npx cypress run --browser chrome --headless --spec 'cypress/e2e'"
   },
   "author": "Anastasiia Kutafina",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "mochawesome": "^7.1.3"
+  }
 }
