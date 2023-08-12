@@ -1,6 +1,9 @@
 import AjaxDataPage from "../pages/ajax-data-page";
+
 //todo: put visit in general steps
 // put url path as a constant
+
+const ajaxRequestAlias = 'getAjaxData';
 
 export class AjaxDataSteps //extends GeneralStep
 {
@@ -29,6 +32,27 @@ export class AjaxDataSteps //extends GeneralStep
 
     clickTriggeringRequestBtn(){
         AjaxDataPage.getTriggeringRequestBtn.click()
+    }
+
+    //todo: move to general
+    inteceptAjaxRequest(ajaxRequestResponse){
+        if(ajaxRequestResponse.request) {
+            if (ajaxRequestResponse.response) {
+                return cy.intercept(
+                    ajaxRequestResponse.request,
+                    ajaxRequestResponse.response //stubbing
+                ).as(ajaxRequestAlias)
+            }
+            else{
+                return cy.intercept(
+                    ajaxRequestResponse.request
+                ).as(ajaxRequestAlias)
+            }
+        }
+    }
+
+    waitForAjaxResponse(timeout){
+        cy.waitForResponse('@' + ajaxRequestAlias, timeout)
     }
 
 }

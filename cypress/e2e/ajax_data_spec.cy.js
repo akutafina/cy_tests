@@ -3,7 +3,8 @@
 //todo: page object model in cypress https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/
 
 import { ajaxDataSteps } from "../steps/ajax-data-steps";
-import ajaxRequestResponse from '../fixtures/ajax-request-response.json'
+import ajaxRequestResponse from '../fixtures/ajax-request.json';
+// import ajaxRequestResponse from '../fixtures/ajax-request-response.json' //to stub
 
 //todo: Record the following steps. check the videos are there
 
@@ -18,16 +19,9 @@ describe('AJAX Data Page', () => {
     })
 
     it('shows an element after processing of an AJAX request', () => {
-
-        cy.intercept(
-            ajaxRequestResponse.request,
-            ajaxRequestResponse.response
-      ).as('getAjaxData') // and assign an alias
-
+        ajaxDataSteps.inteceptAjaxRequest(ajaxRequestResponse)
         ajaxDataSteps.clickTriggeringRequestBtn()
-
-
-      cy.wait('@getAjaxData',{ timeout : 15000}).its('response.statusCode').should('be.oneOf', [200, 304])
+        ajaxDataSteps.waitForAjaxResponse(15000)
         ajaxDataSteps.hasDataLoadMessage('Data loaded with AJAX get request.');
 
   })

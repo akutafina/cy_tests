@@ -5,7 +5,8 @@ class DynamicTablePage {
     }
 
     static get getNameField() {
-        return cy.get('#name').scrollIntoView()
+        cy.get('#name').scrollIntoView()
+        return cy.get('#name')
     }
 
 
