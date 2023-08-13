@@ -5,6 +5,7 @@ import {sampleAppSteps} from "../../steps/sample-app-steps";
 
 const validUserCredentials = credentials;
 
+//todo: move browser and viewport in Cypress.on
 describe('Sample App Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
