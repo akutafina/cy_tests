@@ -1,6 +1,4 @@
 const { defineConfig } = require("cypress");
-// const _ = require('lodash')
-// const del = require('del')
 
 module.exports = defineConfig({
   e2e: {
@@ -9,7 +7,6 @@ module.exports = defineConfig({
       "runMode": 1,
       "openMode": 0
     },
-    //todo: merge reports with mochawesome-merge + mochawesome-report-generator
     reporter: "mochawesome",
     reporterOptions: {
       "reportDir": "cypress/reports/e2e",

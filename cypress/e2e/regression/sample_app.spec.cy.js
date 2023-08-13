@@ -5,7 +5,6 @@ import {sampleAppSteps} from "../../steps/sample-app-steps";
 
 const validUserCredentials = credentials;
 
-//todo: move browser and viewport in Cypress.on
 describe('Sample App Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
@@ -18,11 +17,14 @@ describe('Sample App Page (browser ' + Cypress.browser.name + ', viewport ' + Cy
 
     //todo: move pwd to config
     validUserCredentials.forEach((credentials) => {
-        it('signs in and out with valid credentials: "' + credentials.userName + '", "' + credentials.password + '"', () => {
+        it('signs in and out with valid credentials: "' + credentials.userName + '", "' +
+            // credentials.comment
+            Cypress.env('DEFAULT_USERS_PWD')
+            + '"', () => {
             sampleAppSteps.verifyLoginFormIsClear()
             sampleAppSteps.fillInLoginForm(credentials);
             sampleAppSteps.submitLoginForm();
-            sampleAppSteps.successfulLoginMessageIsDisplayed(credentials.userName);
+            sampleAppSteps.successfulLoginMessageIsDisplayed(credentials.userName,Cypress.env('DEFAULT_USERS_PWD'));
             sampleAppSteps.isOnSampleAppPage();
             sampleAppSteps.hasLogoutButton()
             sampleAppSteps.clickLogOutBtn()

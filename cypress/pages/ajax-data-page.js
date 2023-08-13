@@ -4,14 +4,8 @@ import { GeneralPage } from "./general-page";
 class AjaxDataPage extends GeneralPage{
 
     static path = '/ajax';
-    // //todo: move to basic steps
-    // static get getPageTitle() {
-    //     // return cy.xpath(`//h2[@name='contactme']`);
-    //     return cy.get('h3')
-    // }
 
     static get getTriggeringRequestBtn(){
-        //todo: ask it looks for the first btn or the first btn whoich contains?
         return  cy.get('button').contains('Button Triggering AJAX Request')
     }
 

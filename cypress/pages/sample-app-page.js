@@ -3,11 +3,6 @@ import { GeneralPage } from "./general-page";
 class SampleAppPage extends GeneralPage{
     static path = '/sampleapp';
 
-    // static get getPageTitle() {
-    //     // return cy.xpath(`//h2[@name='contactme']`);
-    //     return cy.get('h3')
-    // }
-    //
     static get getUserNameField(){
         return cy.get('[placeholder="User Name"]')
     }

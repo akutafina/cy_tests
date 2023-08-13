@@ -32,12 +32,8 @@ describe('Text Input Page (browser ' + Cypress.browser.name + ', viewport ' + Cy
 
     })
 
-    //todo: can you reuse scenarios?
-    //add tags as smoke and full integration tests and config in the config and console params
+    //todo:
     it('allows to modify the button name twice without the page reload', () => {
-        //todo: change the TC naming
-        //todo: add a list of positive names and make a scenario outline
-        //todo: add a negative TC
         const newName1 = 'Updated Button\'s Name'
 
         const newName2 = 'Updated Again Button\'s Name'

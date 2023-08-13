@@ -2,9 +2,7 @@
 
 export class GeneralPage {
 
-    //todo: move to basic steps
     static get getPageTitle() {
-        // return cy.xpath(`//h2[@name='contactme']`);
         return cy.get('h3')
     }
 

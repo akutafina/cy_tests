@@ -1,11 +1,6 @@
 import { GeneralPage } from "./general-page";
 
 class VisibilityPage extends GeneralPage{
-
-    // static get getPageTitle() {
-    //     return cy.get('h3')
-    // }
-
     static path = '/visibility';
 
     static get getHideBtn() {

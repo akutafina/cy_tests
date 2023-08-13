@@ -27,14 +27,3 @@ Cypress.Commands.add('isOutsideViewport', { prevSubject: true }, (subject) => {
 
     return subject;
 });
-
-Cypress.Commands.add('isOutsideViewport', { prevSubject: true }, (subject) => {
-    const rect = subject[0].getBoundingClientRect();
-
-    expect(rect.top).not.to.be.within(0, Cypress.config().viewportHeight);
-    expect(rect.right).not.to.be.within(0,Cypress.config().viewportWidth);
-    expect(rect.bottom).not.to.be.within(0, Cypress.config().viewportHeight);
-    expect(rect.left).not.to.be.within(0, Cypress.config().viewportWidth);
-
-    return subject;
-});

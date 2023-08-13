@@ -12,5 +12,4 @@ describe('Failed Test Example (browser ' + Cypress.browser.name + ', viewport ' 
         visibilitySteps.titleTextIs('Failed Test Example');
     })
 
-
 })
