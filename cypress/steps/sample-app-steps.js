@@ -15,14 +15,14 @@ export class SampleAppSteps extends GeneralSteps
         //todo: improve matcher to the full match
     }
 
-    fillInLoginForm(credentials) {
-        if (credentials.userName) {
+    fillInLoginForm(userName, password) {
+        if (userName) {
             SampleAppPage.getUserNameField
-                .type(credentials.userName).should('have.value', credentials.userName);
+                .type(userName).should('have.value', userName);
         }
-        if (credentials.password) {
+        if (password) {
             SampleAppPage.getPasswordField
-                .type(credentials.password).should('have.value', credentials.password);
+                .type(password).should('have.value', password);
         }
     }
 

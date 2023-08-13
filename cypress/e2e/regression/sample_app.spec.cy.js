@@ -15,16 +15,16 @@ describe('Sample App Page (browser ' + Cypress.browser.name + ', viewport ' + Cy
         sampleAppSteps.titleTextIs('Sample App');
     })
 
-    //todo: move pwd to config
     validUserCredentials.forEach((credentials) => {
+        const password = Cypress.env('DEFAULT_USERS_PWD');
+
         it('signs in and out with valid credentials: "' + credentials.userName + '", "' +
-            // credentials.comment
-            Cypress.env('DEFAULT_USERS_PWD')
+            credentials.comment
             + '"', () => {
             sampleAppSteps.verifyLoginFormIsClear()
-            sampleAppSteps.fillInLoginForm(credentials);
+            sampleAppSteps.fillInLoginForm(credentials.userName, password);
             sampleAppSteps.submitLoginForm();
-            sampleAppSteps.successfulLoginMessageIsDisplayed(credentials.userName,Cypress.env('DEFAULT_USERS_PWD'));
+            sampleAppSteps.successfulLoginMessageIsDisplayed(credentials.userName);
             sampleAppSteps.isOnSampleAppPage();
             sampleAppSteps.hasLogoutButton()
             sampleAppSteps.clickLogOutBtn()
