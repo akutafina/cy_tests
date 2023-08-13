@@ -38,7 +38,9 @@ In order to utilise this project:
 
 The project is broken into separate parts for smoke and e2e testing. Each of these parts can be utilised independently of the others using the `scripts` from [package.json](package.json).
 
-Command pattern to run a specific set of tests modules in a chosen browser and one of three viewports is following:
+To open **graphic UI** of your Cypress tests follow [the guidelines](https://docs.cypress.io/guides/getting-started/opening-the-app).
+
+**Command** pattern **to run** a specific set of tests modules in a chosen browser and one of three viewports **from a terminal** is following:
 
 `npm run test:<e2e/smoke>:<env>:<browser>:<viewport>`
 
