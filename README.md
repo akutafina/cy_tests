@@ -64,3 +64,6 @@ and add it in the CI job properties later.
 
 ## Further in the pipeline:
 * Merging reports into one in the pipeline with mochawesome-merge & mochawesome-report-generator.
+* Add [throttling](https://docs.cypress.io/faq/questions/using-cypress-faq#Can-I-throttle-network-speeds-using-Cypress) speed posibility.
+*  
+    
