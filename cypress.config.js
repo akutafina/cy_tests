@@ -48,10 +48,22 @@ module.exports = defineConfig({
       // })
     },
     baseUrl: "http://localhost:3000",
-    screenshotsFolder: "cypress/reports/e2e/assets",
-    // retries:{
-    //   runMode: 1,
-    //   openMode: 0
-    // }
+    screenshotsFolder: "cypress/reports/e2e/screenshots",
+    video: true,
+    videosFolder: "cypress/reports/e2e/videos",
+    retries: {
+      "runMode": 1,
+      "openMode": 0
+    },
+    reporter: "mochawesome",
+    reporterOptions: {
+      "reportDir": "cypress/reports/e2e",
+      "overwrite": false,
+      "html": false,
+      "reportFilename": "[datetime]_[status]_[name]-report",
+      "timestamp": "default",
+      // "json": false,
+      "showPassed": true
+    }
   }
 });

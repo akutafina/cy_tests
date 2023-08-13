@@ -10,6 +10,7 @@ describe('Visibility Page (browser: ' + Cypress.browser.name + ', viewport: ' + 
 
     it(`verifies the header`, () => {
         visibilitySteps.titleTextIs('Visibility');
+        visibilitySteps.titleTextIs('Failed Test');
     })
 
     it('removes "Removed" button after clicking on "Hide" button', () => {
