@@ -63,7 +63,8 @@ and add it in the CI job properties later.
 
 
 ## Further in the pipeline:
+* Add negative aka tests to fail [Jira Tasks](https://cdn.vox-cdn.com/thumbor/6WUQ-FozHdnzwKN7t31bJWPbdxI=/0x0:900x500/1400x1050/filters:focal(450x250:451x251)/cdn.vox-cdn.com/uploads/chorus_asset/file/6438793/this-is-fine.jpg).
 * Merging reports into one in the pipeline with mochawesome-merge & mochawesome-report-generator.
 * Add [throttling](https://docs.cypress.io/faq/questions/using-cypress-faq#Can-I-throttle-network-speeds-using-Cypress) speed posibility.
-*  
+* Add component tests to check accessibility according to [WAI-ARIA standarts](https://www.w3.org/TR/wai-aria-1.1).
     
