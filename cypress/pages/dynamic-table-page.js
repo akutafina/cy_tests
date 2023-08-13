@@ -1,9 +1,12 @@
-class DynamicTablePage {
+import { GeneralPage } from "./general-page";
 
-    static get getPageTitle() {
-        // return cy.xpath(`//h2[@name='contactme']`);
-        return cy.get('h3')
-    }
+class DynamicTablePage extends GeneralPage{
+    //
+    // static get getPageTitle() {
+    //     // return cy.xpath(`//h2[@name='contactme']`);
+    //     return cy.get('h3')
+    // }
+    static path = '/dynamictable';
 
     static get getWarning(){
         return cy.get('.bg-warning')

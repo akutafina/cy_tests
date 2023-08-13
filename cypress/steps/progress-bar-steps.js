@@ -1,10 +1,14 @@
 import ProgressBarPage from "../pages/progress-bar-page";
+import VisibilityPage from "../pages/visibility-page";
 //todo: put visit in general steps
 // put url path as a constant
 
-const path = '/progressbar';
+import { GeneralSteps, generalSteps } from "./general-steps";
+import AjaxDataPage from "../pages/ajax-data-page";
 
-export class ProgressBarSteps //extends GeneralStep
+// const path = '/progressbar';
+
+export class ProgressBarSteps extends GeneralSteps
 {
     //todo: should be moved out of the login func, because log out doesn't have it?
     //todo: make a mainURL config variable and pass it from the console
@@ -12,19 +16,20 @@ export class ProgressBarSteps //extends GeneralStep
     // challenge: I want to pass a couple of logins; store "" pwd in congig.js?
 
     visit() {
-        cy.visit('http://localhost:3000' + path)
+        cy.visit(this.baseUrl + ProgressBarPage.path)
         this.isOnProgressBarPage()
     }
 
     //todo: move to base steps
     isOnProgressBarPage(){
-        cy.url().should('include', path)
+        this.urlPathIs(ProgressBarPage.path)
+        // cy.url().should('include', path)
         //todo: improve matcher to the full match
     }
-
-    titleTextIs(text) {
-        ProgressBarPage.getPageTitle.should('have.text', text);
-    }
+    //
+    // titleTextIs(text) {
+    //     ProgressBarPage.getPageTitle.should('have.text', text);
+    // }
 
     clickStart() {
         ProgressBarPage.getStartBtn.click()

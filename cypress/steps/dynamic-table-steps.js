@@ -1,10 +1,14 @@
 import DynamicTablePage from "../pages/dynamic-table-page";
+import VisibilityPage from "../pages/visibility-page";
+
+import { GeneralSteps, generalSteps } from "./general-steps";
+import AjaxDataPage from "../pages/ajax-data-page";
 //todo: put visit in general steps
 // put url path as a constant
 
-const path = '/dynamictable';
+// const path = '/dynamictable';
 
-export class DynamicTableSteps //extends GeneralStep
+export class DynamicTableSteps extends GeneralSteps
 {
     //todo: should be moved out of the login func, because log out doesn't have it?
     //todo: make a mainURL config variable and pass it from the console
@@ -12,18 +16,19 @@ export class DynamicTableSteps //extends GeneralStep
     // challenge: I want to pass a couple of logins; store "" pwd in congig.js?
 
     visit() {
-        cy.visit('http://localhost:3000' + path)
+        cy.visit(this.baseUrl + DynamicTablePage.path)
         this.isOnDynamicTablePage()
     }
 
     isOnDynamicTablePage(){
-        cy.url().should('include', path)
-        //todo: improve matcher to the full match
+        this.urlPathIs(DynamicTablePage.path)
+        // cy.url().should('include', .path)
+        // //todo: improve matcher to the full match
     }
-
-    titleTextIs(text) {
-        DynamicTablePage.getPageTitle.should('have.text', text);
-    }
+    //
+    // titleTextIs(text) {
+    //     DynamicTablePage.getPageTitle.should('have.text', text);
+    // }
 
     getTaskManagerTableCellText(processName, metricName){
         return cy.getWaiAriaTableCell(processName, metricName).invoke('text')

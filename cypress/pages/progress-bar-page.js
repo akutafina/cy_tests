@@ -1,8 +1,11 @@
-class ProgressBarPage {
+import { GeneralPage } from "./general-page";
 
-    static get getPageTitle() {
-        return cy.get('h3')
-    }
+class ProgressBarPage extends GeneralPage{
+    //
+    // static get getPageTitle() {
+    //     return cy.get('h3')
+    // }
+    static path = '/progressbar';
 
     static get getStartBtn() {
         return cy.get('button:contains("Start")')

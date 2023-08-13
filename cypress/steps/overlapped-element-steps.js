@@ -1,10 +1,14 @@
 import OverlappedElementPage from "../pages/overlapped-element-page";
+import VisibilityPage from "../pages/visibility-page";
+
+import { GeneralSteps, generalSteps } from "./general-steps";
+import AjaxDataPage from "../pages/ajax-data-page";
 //todo: put visit in general steps
 // put url path as a constant
 
-const path = '/overlapped';
+// const path = '/overlapped';
 
-export class OverlappedElementSteps //extends GeneralStep
+export class OverlappedElementSteps extends GeneralSteps
 {
     //todo: should be moved out of the login func, because log out doesn't have it?
     //todo: make a mainURL config variable and pass it from the console
@@ -12,18 +16,19 @@ export class OverlappedElementSteps //extends GeneralStep
     // challenge: I want to pass a couple of logins; store "" pwd in congig.js?
 
     visit() {
-        cy.visit('http://localhost:3000' + path)
+        cy.visit(this.baseUrl + OverlappedElementPage.path)
         this.isOnOverlappedElementPage()
     }
 
     isOnOverlappedElementPage(){
-        cy.url().should('include', path)
+        this.urlPathIs(OverlappedElementPage.path)
+        // cy.url().should('include', path)
         //todo: improve matcher to the full match
     }
-
-    titleTextIs(text) {
-        OverlappedElementPage.getPageTitle.should('have.text', text);
-    }
+    //
+    // titleTextIs(text) {
+    //     OverlappedElementPage.getPageTitle.should('have.text', text);
+    // }
 
     scrollAndFillInName(name){
         OverlappedElementPage.getNameField.type(name)

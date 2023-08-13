@@ -2,9 +2,12 @@ import TextInputPage from "../pages/text-input-page";
 //todo: put visit in general steps
 // put url path as a constant
 
-const path = '/textinput';
+import { GeneralSteps, generalSteps } from "./general-steps";
+import AjaxDataPage from "../pages/ajax-data-page";
 
-export class TextInputSteps //extends GeneralStep
+// const path = '/textinput';
+
+export class TextInputSteps extends GeneralSteps
 {
     //todo: should be moved out of the login func, because log out doesn't have it?
     //todo: make a mainURL config variable and pass it from the console
@@ -12,19 +15,20 @@ export class TextInputSteps //extends GeneralStep
     // challenge: I want to pass a couple of logins; store "" pwd in congig.js?
 
     visit() {
-        cy.visit('http://localhost:3000' + path)
+        cy.visit(this.baseUrl + TextInputPage.path)
         this.isOnTextInputPage()
     }
 
     //todo: move to base steps
     isOnTextInputPage(){
-        cy.url().should('include', path)
+        this.urlPathIs(TextInputPage.path)
+        // cy.url().should('include', path)
         //todo: improve matcher to the full match
     }
-
-    titleTextIs(text) {
-        TextInputPage.getPageTitle.should('have.text', text);
-    }
+    //
+    // titleTextIs(text) {
+    //     TextInputPage.getPageTitle.should('have.text', text);
+    // }
 
     fillInInputField(newBtnName){
         TextInputPage.getButtonNameInputField.type(newBtnName)

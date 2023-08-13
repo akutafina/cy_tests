@@ -1,8 +1,12 @@
-class TextInputPage {
+import { GeneralPage } from "./general-page";
 
-    static get getPageTitle() {
-        return cy.get('h3')
-    }
+class TextInputPage extends GeneralPage{
+    //
+    // static get getPageTitle() {
+    //     return cy.get('h3')
+    // }
+
+    static path = '/textinput';
 
     static get getButtonNameInputField() {
         return cy.get('#newButtonName')
