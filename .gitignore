@@ -1,2 +1,4 @@
 ### Cypress tests artefacts
 
+cypress/downloads
+cypress/reports
