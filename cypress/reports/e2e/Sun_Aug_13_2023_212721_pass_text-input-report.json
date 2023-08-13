@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-13T19:27:17.404Z",
+    "end": "2023-08-13T19:27:21.167Z",
+    "duration": 3763,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "75f95681-8eb4-4dbd-abb9-c1060a14df93",
+      "title": "",
+      "fullFile": "cypress/e2e/regression/text-input.spec.cy.js",
+      "file": "cypress/e2e/regression/text-input.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a92d9f1a-1c8c-4317-8331-b48de177f367",
+          "title": "Text Input Page (browser chrome, viewport 1920x1080)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifies the header",
+              "fullTitle": "Text Input Page (browser chrome, viewport 1920x1080) verifies the header",
+              "timedOut": null,
+              "duration": 394,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_textInputSteps.textInputSteps.titleTextIs('Text Input');",
+              "err": {},
+              "uuid": "7b0b7c6a-1eb3-4493-9d6d-dddfbad2e071",
+              "parentUUID": "a92d9f1a-1c8c-4317-8331-b48de177f367",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "changes the button's name after filling in 'My button' field and clicking on the button",
+              "fullTitle": "Text Input Page (browser chrome, viewport 1920x1080) changes the button's name after filling in 'My button' field and clicking on the button",
+              "timedOut": null,
+              "duration": 843,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newName = 'New Button\\'s Name';\n_textInputSteps.textInputSteps.fillInInputField(newName);\n_textInputSteps.textInputSteps.updatingBtnTextIs('Button That Should Change it\\'s Name Based on Input Value');\n_textInputSteps.textInputSteps.clickUpdatingBtn();\n_textInputSteps.textInputSteps.updatingBtnTextIs(newName);",
+              "err": {},
+              "uuid": "40299bd3-8747-43b2-a8c3-f4eca58d732c",
+              "parentUUID": "a92d9f1a-1c8c-4317-8331-b48de177f367",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "reloads page at its initial state after button name changes",
+              "fullTitle": "Text Input Page (browser chrome, viewport 1920x1080) reloads page at its initial state after button name changes",
+              "timedOut": null,
+              "duration": 924,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const newName = 'Updated Button\\'s Name';\n_textInputSteps.textInputSteps.fillInInputField(newName);\n_textInputSteps.textInputSteps.updatingBtnTextIs('Button That Should Change it\\'s Name Based on Input Value');\n_textInputSteps.textInputSteps.clickUpdatingBtn();\n_textInputSteps.textInputSteps.updatingBtnTextIs(newName);\ncy.reload();\n_textInputSteps.textInputSteps.updatingBtnTextIs('Button That Should Change it\\'s Name Based on Input Value');",
+              "err": {},
+              "uuid": "7df9368e-954a-4e26-8ba1-b8294e0b6b2f",
+              "parentUUID": "a92d9f1a-1c8c-4317-8331-b48de177f367",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "allows to modify the button name twice without the page reload",
+              "fullTitle": "Text Input Page (browser chrome, viewport 1920x1080) allows to modify the button name twice without the page reload",
+              "timedOut": null,
+              "duration": 1545,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//todo: change the TC naming\n//todo: add a list of positive names and make a scenario outline\n//todo: add a negative TC\nconst newName1 = 'Updated Button\\'s Name';\nconst newName2 = 'Updated Again Button\\'s Name';\ncy.get('[placeholder=\"MyButton\"]').type(`${newName1}`);\ncy.get('[type=\"button\"]').should('have.text', 'Button That Should Change it\\'s Name Based on Input Value');\ncy.get('[type=\"button\"]').contains('Button That Should Change it\\'s Name Based on Input Value').click();\n//todo: place all the text vars into the vars/conts or files (?)\n//todo: read get vs contains\n//todo: whether get('[type=\"button\"]') is ok? there are no data-attr\ncy.get('[type=\"button\"]').should(\"have.text\", `${newName1}`);\ncy.get('[placeholder=\"MyButton\"]').clear().type(`${newName2}`);\ncy.get('[type=\"button\"]').should('have.text', `${newName1}`);\ncy.get('[type=\"button\"]').contains(`${newName1}`).click();\n// todo: following would be correct or a bad practice to pur action after should?\n//  cy.get('[type=\"button\"]').should('have.text', `${newName1}`).click()\n//todo: place all the text vars into the vars/conts or files (?)\n//todo: read get vs contains\n//todo: whether get('[type=\"button\"]') is ok? there are no data-attr\ncy.get('[type=\"button\"]').should(\"have.text\", `${newName2}`);",
+              "err": {},
+              "uuid": "f52e22a8-c42f-4aa8-b3db-778015b3fcc5",
+              "parentUUID": "a92d9f1a-1c8c-4317-8331-b48de177f367",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b0b7c6a-1eb3-4493-9d6d-dddfbad2e071",
+            "40299bd3-8747-43b2-a8c3-f4eca58d732c",
+            "7df9368e-954a-4e26-8ba1-b8294e0b6b2f",
+            "f52e22a8-c42f-4aa8-b3db-778015b3fcc5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3706,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/e2e",
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "timestamp": "default",
+        "showPassed": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

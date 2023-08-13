@@ -4,7 +4,7 @@ import { progressBarSteps } from "../../steps/progress-bar-steps";
 
 
 
-describe('Progress Bar Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('Progress Bar Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         progressBarSteps.visit();

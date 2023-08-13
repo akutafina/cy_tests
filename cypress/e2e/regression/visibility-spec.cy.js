@@ -2,7 +2,7 @@
 
 import { visibilitySteps } from "../../steps/visibility-steps";
 
-describe('Visibility Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('Visibility Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         visibilitySteps.visit();

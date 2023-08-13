@@ -2,7 +2,7 @@
 
 import { overlappedElementSteps } from "../../steps/overlapped-element-steps";
 
-describe('AJAX Data Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('AJAX Data Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         overlappedElementSteps.visit();

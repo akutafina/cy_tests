@@ -5,7 +5,7 @@ import {sampleAppSteps} from "../../steps/sample-app-steps";
 
 const validUserCredentials = credentials;
 
-describe('Sample App Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('Sample App Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         sampleAppSteps.visit();

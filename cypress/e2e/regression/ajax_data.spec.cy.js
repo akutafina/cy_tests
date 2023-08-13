@@ -7,7 +7,7 @@ import ajaxRequestResponse from '../../fixtures/ajax-request.json';
 
 //todo: Record the following steps. check the videos are there
 
-describe('AJAX Data Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('AJAX Data Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         ajaxDataSteps.visit();

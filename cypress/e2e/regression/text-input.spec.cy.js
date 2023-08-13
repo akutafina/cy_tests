@@ -2,7 +2,7 @@
 
 import { textInputSteps } from "../../steps/text-input-steps";
 
-describe('Text Input Page (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
+describe('Text Input Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
     beforeEach(() => {
         textInputSteps.visit();

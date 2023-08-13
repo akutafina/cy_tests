@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-13T19:51:16.418Z",
+    "end": "2023-08-13T19:51:32.818Z",
+    "duration": 16400,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aeaea87b-03d9-4fb7-8b97-c600b422b730",
+      "title": "",
+      "fullFile": "cypress/e2e/regression/ajax_data.spec.cy.js",
+      "file": "cypress/e2e/regression/ajax_data.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7a8f59dd-9b75-4dc9-9f30-1b3c9e862b8c",
+          "title": "AJAX Data Page (browser electron, viewport 1000x660)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifies the header",
+              "fullTitle": "AJAX Data Page (browser electron, viewport 1000x660) verifies the header",
+              "timedOut": null,
+              "duration": 860,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ajaxDataSteps.ajaxDataSteps.titleTextIs('AJAX Data');",
+              "err": {},
+              "uuid": "6e002b6e-2713-4362-8c33-611b0738f80d",
+              "parentUUID": "7a8f59dd-9b75-4dc9-9f30-1b3c9e862b8c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "shows an element after processing of an AJAX request",
+              "fullTitle": "AJAX Data Page (browser electron, viewport 1000x660) shows an element after processing of an AJAX request",
+              "timedOut": null,
+              "duration": 15443,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ajaxDataSteps.ajaxDataSteps.inteceptAjaxRequest(_ajaxRequest.default);\n_ajaxDataSteps.ajaxDataSteps.clickTriggeringRequestBtn();\n_ajaxDataSteps.ajaxDataSteps.waitForAjaxResponse(15000);\n_ajaxDataSteps.ajaxDataSteps.hasDataLoadMessage('Data loaded with AJAX get request.');",
+              "err": {},
+              "uuid": "6b451d4c-dc75-4706-8742-90230c4ab4d4",
+              "parentUUID": "7a8f59dd-9b75-4dc9-9f30-1b3c9e862b8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e002b6e-2713-4362-8c33-611b0738f80d",
+            "6b451d4c-dc75-4706-8742-90230c4ab4d4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16303,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/e2e",
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "timestamp": "default",
+        "showPassed": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

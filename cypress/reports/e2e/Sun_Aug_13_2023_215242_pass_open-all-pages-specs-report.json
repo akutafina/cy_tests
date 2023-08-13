@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-13T19:52:40.931Z",
+    "end": "2023-08-13T19:52:42.711Z",
+    "duration": 1780,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e662db09-3c2a-448a-8aa6-24c2f8f44b47",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/open-all-pages-specs.cy.js",
+      "file": "cypress/e2e/smoke/open-all-pages-specs.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d7ff7da9-a824-4431-a8be-7106c8674570",
+          "title": "Loads all the pages (browser: electron, viewport: 1000x660)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 473,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ajaxDataSteps.ajaxDataSteps.visit();\n_ajaxDataSteps.ajaxDataSteps.hasTitle();",
+              "err": {},
+              "uuid": "070ea674-7055-4747-89fb-d22625538f12",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 239,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_dynamicTableSteps.dynamicTableSteps.visit();\n_dynamicTableSteps.dynamicTableSteps.hasTitle();",
+              "err": {},
+              "uuid": "4532c5f0-9e57-441d-969b-20ab7e718311",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 198,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_overlappedElementSteps.overlappedElementSteps.visit();\n_overlappedElementSteps.overlappedElementSteps.hasTitle();",
+              "err": {},
+              "uuid": "0a99ac6b-93b8-4b2d-8964-81660062ef6c",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 195,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_progressBarSteps.progressBarSteps.visit();\n_progressBarSteps.progressBarSteps.hasTitle();",
+              "err": {},
+              "uuid": "57f7c806-552c-47e6-9bb2-9a2b17310ee9",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 198,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_sampleAppSteps.sampleAppSteps.visit();\n_sampleAppSteps.sampleAppSteps.hasTitle();",
+              "err": {},
+              "uuid": "3bc61892-e906-4940-ab35-40ccb0968a83",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 188,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_textInputSteps.textInputSteps.visit();\n_textInputSteps.textInputSteps.hasTitle();",
+              "err": {},
+              "uuid": "c0045631-f395-40f6-85d1-51edfeea23a2",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: electron, viewport: 1000x660) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 181,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_visibilitySteps.visibilitySteps.visit();\n_visibilitySteps.visibilitySteps.hasTitle();",
+              "err": {},
+              "uuid": "bb89d807-872c-4c8a-98e0-61be1d4c395c",
+              "parentUUID": "d7ff7da9-a824-4431-a8be-7106c8674570",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "070ea674-7055-4747-89fb-d22625538f12",
+            "4532c5f0-9e57-441d-969b-20ab7e718311",
+            "0a99ac6b-93b8-4b2d-8964-81660062ef6c",
+            "57f7c806-552c-47e6-9bb2-9a2b17310ee9",
+            "3bc61892-e906-4940-ab35-40ccb0968a83",
+            "c0045631-f395-40f6-85d1-51edfeea23a2",
+            "bb89d807-872c-4c8a-98e0-61be1d4c395c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1672,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/e2e",
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "timestamp": "default",
+        "showPassed": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

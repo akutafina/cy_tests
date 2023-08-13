@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-13T19:53:32.861Z",
+    "end": "2023-08-13T19:53:34.951Z",
+    "duration": 2090,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a557f0f2-da80-40a5-ab38-e0fdf7f58c2e",
+      "title": "",
+      "fullFile": "cypress/e2e/smoke/open-all-pages-specs.cy.js",
+      "file": "cypress/e2e/smoke/open-all-pages-specs.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+          "title": "Loads all the pages (browser: chrome, viewport: 1920x1080)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 618,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_ajaxDataSteps.ajaxDataSteps.visit();\n_ajaxDataSteps.ajaxDataSteps.hasTitle();",
+              "err": {},
+              "uuid": "de6980db-93e4-4dd9-82fa-48b89d4e34c1",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 208,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_dynamicTableSteps.dynamicTableSteps.visit();\n_dynamicTableSteps.dynamicTableSteps.hasTitle();",
+              "err": {},
+              "uuid": "fa4312d8-bc03-4856-85f9-919a14ac61c6",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 195,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_overlappedElementSteps.overlappedElementSteps.visit();\n_overlappedElementSteps.overlappedElementSteps.hasTitle();",
+              "err": {},
+              "uuid": "20fc425e-933c-43bf-a3fb-6063608f7b88",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 236,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_progressBarSteps.progressBarSteps.visit();\n_progressBarSteps.progressBarSteps.hasTitle();",
+              "err": {},
+              "uuid": "232dac6e-1e47-4d31-9f4a-5f81f40fe207",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 225,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_sampleAppSteps.sampleAppSteps.visit();\n_sampleAppSteps.sampleAppSteps.hasTitle();",
+              "err": {},
+              "uuid": "e9e18461-eef7-40d5-a0b6-5e89551e1ddf",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 250,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_textInputSteps.textInputSteps.visit();\n_textInputSteps.textInputSteps.hasTitle();",
+              "err": {},
+              "uuid": "1fe48210-94dd-4040-bf7f-746e3079c07f",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visibility page loads and has title",
+              "fullTitle": "Loads all the pages (browser: chrome, viewport: 1920x1080) Visibility page loads and has title",
+              "timedOut": null,
+              "duration": 265,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_visibilitySteps.visibilitySteps.visit();\n_visibilitySteps.visibilitySteps.hasTitle();",
+              "err": {},
+              "uuid": "8b109d2e-c136-42fc-8816-84e07ff56a6b",
+              "parentUUID": "53f232bc-7f52-4186-b5b5-6af33758ee68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de6980db-93e4-4dd9-82fa-48b89d4e34c1",
+            "fa4312d8-bc03-4856-85f9-919a14ac61c6",
+            "20fc425e-933c-43bf-a3fb-6063608f7b88",
+            "232dac6e-1e47-4d31-9f4a-5f81f40fe207",
+            "e9e18461-eef7-40d5-a0b6-5e89551e1ddf",
+            "1fe48210-94dd-4040-bf7f-746e3079c07f",
+            "8b109d2e-c136-42fc-8816-84e07ff56a6b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1997,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/e2e",
+        "overwrite": true,
+        "reportFilename": "[datetime]_[status]_[name]-report",
+        "timestamp": "default",
+        "showPassed": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
