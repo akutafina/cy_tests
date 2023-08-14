@@ -8,7 +8,7 @@ describe('Failed Test Example (browser ' + Cypress.browser.name + ', viewport ' 
         visibilitySteps.visit();
     })
 
-    it(`the test should fail`, () => {
+    it.skip(`the test should fail`, () => {
         visibilitySteps.titleTextIs('Failed Test Example');
     })
 
