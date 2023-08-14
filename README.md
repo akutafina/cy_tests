@@ -75,8 +75,8 @@ Other examples of needs and their params could be:
 
 ```
 headless: --headless,
-local: --env ENV='local',
-prod: --env ENV='prod',
+local: --env env='local',
+prod: --env env='prod',
 chrome: --browser chrome,
 firefox: --browser firefox,
 edge: --browser edge,
@@ -84,21 +84,24 @@ smoke: --spec 'cypress/e2e/smoke/*',
 regression: --spec 'cypress/e2e/regression/*'
 ```
 
-Additionally, following set up before script will set up a veiwport:
+Additionally, following set up **before ** script will set up a veiwport:
 
 ```
-for desktop: "export CYPRESS_VIEWPORT_WIDTH=1920;export CYPRESS_VIEWPORT_HEIGHT=1080;",
-for mobile:portrait: "export CYPRESS_VIEWPORT_WIDTH=360;export CYPRESS_VIEWPORT_HEIGHT=800;",
-for mobile:landscape: "export CYPRESS_VIEWPORT_WIDTH=800;export CYPRESS_VIEWPORT_HEIGHT=360;"
+// for desktop:
+"export CYPRESS_VIEWPORT_WIDTH=1920;export CYPRESS_VIEWPORT_HEIGHT=1080;",
+// for mobile:portrait:
+"export CYPRESS_VIEWPORT_WIDTH=360;export CYPRESS_VIEWPORT_HEIGHT=800;",
+// for mobile:landscape:
+"export CYPRESS_VIEWPORT_WIDTH=800;export CYPRESS_VIEWPORT_HEIGHT=360;"
 ```
 
 *IMPORTANT!*
 
 In order for the [Login tests](cy_1/cy_tests_1/cypress/e2e/regression/sample_app.spec.cy.js) to pass, you will need to
-pass the test pwd.
-Then you can pass when running with a comand e.g.
-like: `export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:smoke:local:chrome:1920x1080` and add it in the CI job
-properties later.
+pass the test users' pwd.
+Then you can pass when running with a comand e.g.:
+`export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:smoke:local:chrome:1920x1080`
+and add the param to the CI job properties later.
 
 ## Reporting
 
