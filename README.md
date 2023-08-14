@@ -30,6 +30,8 @@ and [cypress/e2e/regression](cypress/e2e/regression) folders.
 
 ### Set up
 
+***Disclamer:*** This tests set up has been tested for mac users only. In case of need to support tests runs on Windows or other OSs those guidelines need to be reviewed.
+
 In order to utilise this project:
 
 * Make sure you have all
