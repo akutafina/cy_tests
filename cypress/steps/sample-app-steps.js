@@ -11,15 +11,16 @@ export class SampleAppSteps extends GeneralSteps {
         this.urlPathIs(SampleAppPage.path)
     }
 
-    fillInLoginForm(userName, password) {
-        if (userName) {
-            SampleAppPage.getUserNameField
-                .type(userName).should('have.value', userName);
-        }
-        if (password) {
-            SampleAppPage.getPasswordField
-                .type(password).should('have.value', password);
-        }
+    fillInLoginFormWithDefaultPwd(userName) {
+
+        const password = Cypress.env('DEFAULT_USERS_PWD');
+
+        expect(username, 'username was set').to.be.a('string').and.not.be.empty
+        expect(password, 'password was set').to.be.a('string').and.not.be.empty
+
+        SampleAppPage.getUserNameField.type(userName).should('have.value', userName);
+        SampleAppPage.getPasswordField.type(password).should('have.value', password);
+
     }
 
     verifyLoginFormIsClear() {
