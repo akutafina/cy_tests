@@ -3,7 +3,7 @@ import {GeneralSteps} from "./general-steps";
 
 export class SampleAppSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + SampleAppPage.path)
+        cy.visit(SampleAppPage.path)
         this.isOnSampleAppPage();
     }
 

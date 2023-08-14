@@ -1,11 +1,8 @@
 /// <reference types="Cypress"/>
 
 import {GeneralPage} from "../pages/general-page";
-import {configUtility} from "../config-utility";
 
 export class GeneralSteps {
-
-    baseUrl = configUtility.getBaseUrl();
 
     hasTitle() {
         GeneralPage.getPageTitle.should('be.visible');

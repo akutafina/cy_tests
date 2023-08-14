@@ -18,7 +18,7 @@ const isFullOverlap = (element1, element2) => {
 
 export class VisibilitySteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + VisibilityPage.path)
+        cy.visit(VisibilityPage.path)
         this.isOnVisibilityPage()
     }
 

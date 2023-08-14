@@ -3,7 +3,7 @@ import {GeneralSteps} from "./general-steps";
 
 export class DynamicTableSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + DynamicTablePage.path)
+        cy.visit(DynamicTablePage.path)
         this.isOnDynamicTablePage()
     }
 

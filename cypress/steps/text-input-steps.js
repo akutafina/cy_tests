@@ -3,7 +3,7 @@ import {GeneralSteps} from "./general-steps";
 
 export class TextInputSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + TextInputPage.path)
+        cy.visit(TextInputPage.path)
         this.isOnTextInputPage()
     }
 

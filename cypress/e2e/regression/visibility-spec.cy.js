@@ -14,7 +14,6 @@ describe('Visibility Page (browser ' + Cypress.browser.name + ', viewport ' + Cy
 
     it('removes "Removed" button after clicking on "Hide" button', () => {
         visibilitySteps.clickHideBtn()
-        // visibilitySteps.removedBtnIsNotInDom()
     })
 
     it('perceived "Zero Width" button as invisible after clicking on "Hide" button', () => {

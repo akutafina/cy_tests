@@ -3,7 +3,7 @@ import {GeneralSteps} from "./general-steps";
 
 export class OverlappedElementSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + OverlappedElementPage.path)
+        cy.visit(OverlappedElementPage.path)
         this.isOnOverlappedElementPage()
     }
 

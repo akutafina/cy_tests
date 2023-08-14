@@ -3,7 +3,7 @@ import {GeneralSteps} from "./general-steps";
 
 export class ProgressBarSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + ProgressBarPage.path)
+        cy.visit(ProgressBarPage.path)
         this.isOnProgressBarPage()
     }
 

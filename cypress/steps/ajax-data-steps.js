@@ -5,7 +5,7 @@ const ajaxRequestAlias = 'getAjaxData';
 
 export class AjaxDataSteps extends GeneralSteps {
     visit() {
-        cy.visit(this.baseUrl + AjaxDataPage.path)
+        cy.visit(AjaxDataPage.path)
         this.isOnAjaxDataPage(AjaxDataPage.path)
     }
 
