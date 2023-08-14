@@ -50,8 +50,8 @@ E.g. to run e2e `smoke` tests only in `Chrome` `desktop` browser against your ap
 [Look here](##Teck-Solution) for all the supported values of `env`,`browser` and `viewport` values.
 
 In case of need of passing additional params to the existing script use `-- <additional param>`, e.g. run following to test your reporting logic:
-`npm run cy:run -- --spec 'cypress/e2e/regression/failed-test-example-spec.cy.js'`
-The test is marker as skipped by default.
+`npm run cy:run -- --spec 'cypress/e2e/regression/skip-failed-test-example-spec.cy.js'`
+The test is marker as skipped by default, so if you want it to fail you have to unskip it.
 
 Other examples of needs and their params could be:
     ```
@@ -88,9 +88,9 @@ and add it in the CI job properties later.
 
 
 ## Further in the pipeline:
+* Add instruction with screenshots on how to run from studio (Intelij, Visual).
 * Add negative aka tests to fail [Jira Tasks](https://cdn.vox-cdn.com/thumbor/6WUQ-FozHdnzwKN7t31bJWPbdxI=/0x0:900x500/1400x1050/filters:focal(450x250:451x251)/cdn.vox-cdn.com/uploads/chorus_asset/file/6438793/this-is-fine.jpg).
 * Merging reports into one in the pipeline with mochawesome-merge & mochawesome-report-generator.
 * Add [throttling](https://docs.cypress.io/faq/questions/using-cypress-faq#Can-I-throttle-network-speeds-using-Cypress) speed posibility.
 * Add component tests to check accessibility according to [WAI-ARIA standarts](https://www.w3.org/TR/wai-aria-1.1).
 * Introduce metrics to track the test implementation progress.
-    
