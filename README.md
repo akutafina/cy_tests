@@ -40,8 +40,10 @@ In order to utilise this project:
 * Install Cypress following
   the [official documentation guidelines](https://docs.cypress.io/guides/getting-started/installing-cypress#Installing).
 * Clone or download this project to your local.
-* Navigate to the project root folder in your terminal and execute `sudo npm install --save-dev` to install all dependencies.
-* In case you use [IntelliJ IDEA](https://www.jetbrains.com/de-de/idea/download) IDE, we recommend to have [Cypress Support Plugin](https://plugins.jetbrains.com/plugin/13819-cypress-support) installed.
+* Navigate to the project root folder in your terminal and execute `sudo npm install --save-dev` to install all
+  dependencies.
+* In case you use [IntelliJ IDEA](https://www.jetbrains.com/de-de/idea/download) IDE, we recommend to
+  have [Cypress Support Plugin](https://plugins.jetbrains.com/plugin/13819-cypress-support) installed.
 * In case running the tests with `local` configuration do not forget to spin up the UI Test Automation Playground App
   following [the guidelines](https://github.com/Inflectra/ui-test-automation-playground#usage).
 
@@ -70,6 +72,7 @@ test your reporting logic:
 The test is marker as skipped by default, so if you want it to fail you have to unskip it.
 
 Other examples of needs and their params could be:
+
 ```
 headless: --headless,
 local: --env ENV='local',
@@ -91,20 +94,29 @@ for mobile:landscape: "export CYPRESS_VIEWPORT_WIDTH=800;export CYPRESS_VIEWPORT
 
 *IMPORTANT!*
 
-In order for the [Login tests](cy_1/cy_tests_1/cypress/e2e/regression/sample_app.spec.cy.js) to pass, you will need to pass the test pwd.
-Then you can pass when running with a comand e.g. like: `export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:smoke:local:chrome:1920x1080` and add it in the CI job properties later.
+In order for the [Login tests](cy_1/cy_tests_1/cypress/e2e/regression/sample_app.spec.cy.js) to pass, you will need to
+pass the test pwd.
+Then you can pass when running with a comand e.g.
+like: `export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:smoke:local:chrome:1920x1080` and add it in the CI job
+properties later.
 
 ## Reporting
 
 * Reports for each tests are written into `cypress/reports` directories after a successful run.
-* Screenshots are generated in case a test fail into 'screenshots' directory withing the respective to the test suite folder inside `cypress/reports`.
-* Video recording is off y default. It can be switched on by changing video value to true in [cypress.config.js](cy_1/cy_tests_1/cypress.config.js). Generated videos can be found for all the tests regardless of their status in the 'videos' directory withing the respective to the test suite folder inside `cypress/reports`.
+* Screenshots are generated in case a test fail into 'screenshots' directory withing the respective to the test suite
+  folder inside `cypress/reports`.
+* Video recording is off y default. It can be switched on by changing video value to true
+  in [cypress.config.js](cy_1/cy_tests_1/cypress.config.js). Generated videos can be found for all the tests regardless
+  of their status in the 'videos' directory withing the respective to the test suite folder inside `cypress/reports`.
 
 ## Further in the pipeline:
 
 * Add instruction with screenshots on how to run from studio (Intelij, Visual).
-* Add negative aka tests to fail [Jira Tasks](https://cdn.vox-cdn.com/thumbor/6WUQ-FozHdnzwKN7t31bJWPbdxI=/0x0:900x500/1400x1050/filters:focal(450x250:451x251)/cdn.vox-cdn.com/uploads/chorus_asset/file/6438793/this-is-fine.jpg).
+* Add negative aka tests to
+  fail [Jira Tasks](https://cdn.vox-cdn.com/thumbor/6WUQ-FozHdnzwKN7t31bJWPbdxI=/0x0:900x500/1400x1050/filters:focal(450x250:451x251)/cdn.vox-cdn.com/uploads/chorus_asset/file/6438793/this-is-fine.jpg)
+  .
 * Merging reports into one in the pipeline with mochawesome-merge & mochawesome-report-generator.
-* Add [throttling](https://docs.cypress.io/faq/questions/using-cypress-faq#Can-I-throttle-network-speeds-using-Cypress) speed posibility.
+* Add [throttling](https://docs.cypress.io/faq/questions/using-cypress-faq#Can-I-throttle-network-speeds-using-Cypress)
+  speed posibility.
 * Add component tests to check accessibility according to [WAI-ARIA standarts](https://www.w3.org/TR/wai-aria-1.1).
 * Introduce metrics to track the test implementation progress.
