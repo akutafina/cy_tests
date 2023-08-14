@@ -1,6 +1,6 @@
-import { GeneralPage } from "./general-page";
+import {GeneralPage} from "./general-page";
 
-class DynamicTablePage extends GeneralPage{
+class DynamicTablePage extends GeneralPage {
     static path = '/overlapped';
 
     static get getNameField() {

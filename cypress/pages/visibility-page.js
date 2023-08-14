@@ -1,6 +1,6 @@
-import { GeneralPage } from "./general-page";
+import {GeneralPage} from "./general-page";
 
-class VisibilityPage extends GeneralPage{
+class VisibilityPage extends GeneralPage {
     static path = '/visibility';
 
     static get getHideBtn() {
@@ -30,6 +30,7 @@ class VisibilityPage extends GeneralPage{
     static get getVisibilityHiddenBtn() {
         return cy.get('#invisibleButton')
     }
+
     static get getDisplayNoneBtn() {
         return cy.get('#notdisplayedButton')
     }

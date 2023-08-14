@@ -1,6 +1,6 @@
-import { GeneralPage } from "./general-page";
+import {GeneralPage} from "./general-page";
 
-class TextInputPage extends GeneralPage{
+class TextInputPage extends GeneralPage {
     static path = '/textinput';
 
     static get getButtonNameInputField() {

@@ -1,16 +1,15 @@
+import {GeneralPage} from "./general-page";
 
-import { GeneralPage } from "./general-page";
-
-class AjaxDataPage extends GeneralPage{
+class AjaxDataPage extends GeneralPage {
 
     static path = '/ajax';
 
-    static get getTriggeringRequestBtn(){
-        return  cy.get('button').contains('Button Triggering AJAX Request')
+    static get getTriggeringRequestBtn() {
+        return cy.get('button').contains('Button Triggering AJAX Request')
     }
 
-    static get getContentMessage(){
-        return  cy.get('#content')
+    static get getContentMessage() {
+        return cy.get('#content')
     }
 
 }

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { dynamicTableSteps } from "../../steps/dynamic-table-steps";
+import {dynamicTableSteps} from "../../steps/dynamic-table-steps";
 
 describe('AJAX Data Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 
@@ -14,7 +14,7 @@ describe('AJAX Data Page (browser ' + Cypress.browser.name + ', viewport ' + Cyp
 
     it('Chrome CPU Load table value equals one in the yellow label', () => {
         dynamicTableSteps
-            .compareValuesInTableAndWarnFor('Chrome','CPU' )
+            .compareValuesInTableAndWarnFor('Chrome', 'CPU')
 
     })
 

@@ -3,8 +3,7 @@
     "method": "GET",
     "url": "/ajaxdata"
   },
-  "response":
-[
-  "Data loaded with AJAX get request."
-]
+  "response": [
+    "Data loaded with AJAX get request."
+  ]
 }

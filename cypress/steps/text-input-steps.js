@@ -1,29 +1,28 @@
 import TextInputPage from "../pages/text-input-page";
-import { GeneralSteps, generalSteps } from "./general-steps";
+import {GeneralSteps} from "./general-steps";
 
-export class TextInputSteps extends GeneralSteps
-{
+export class TextInputSteps extends GeneralSteps {
     visit() {
         cy.visit(this.baseUrl + TextInputPage.path)
         this.isOnTextInputPage()
     }
 
-    isOnTextInputPage(){
+    isOnTextInputPage() {
         this.urlPathIs(TextInputPage.path)
         // cy.url().should('include', path)
         //todo: improve matcher to the full match
     }
 
-    fillInInputField(newBtnName){
+    fillInInputField(newBtnName) {
         TextInputPage.getButtonNameInputField.type(newBtnName)
         // would check for accessibility as well but pressing Enter reloads the page >> Jira Task
     }
 
-    updatingBtnTextIs(expectedBtnText){
+    updatingBtnTextIs(expectedBtnText) {
         TextInputPage.getUpdatingBtn.should('have.text', expectedBtnText)
     }
 
-    clickUpdatingBtn(){
+    clickUpdatingBtn() {
         TextInputPage.getUpdatingBtn.click()
     }
 

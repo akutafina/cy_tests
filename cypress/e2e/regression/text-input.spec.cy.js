@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { textInputSteps } from "../../steps/text-input-steps";
+import {textInputSteps} from "../../steps/text-input-steps";
 
 describe('Text Input Page (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 

@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { visibilitySteps } from "../../steps/visibility-steps";
+import {visibilitySteps} from "../../steps/visibility-steps";
 
 describe('Failed Test Example (browser ' + Cypress.browser.name + ', viewport ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {
 

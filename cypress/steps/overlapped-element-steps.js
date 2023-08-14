@@ -1,22 +1,21 @@
 import OverlappedElementPage from "../pages/overlapped-element-page";
-import { GeneralSteps, generalSteps } from "./general-steps";
+import {GeneralSteps} from "./general-steps";
 
-export class OverlappedElementSteps extends GeneralSteps
-{
-   visit() {
+export class OverlappedElementSteps extends GeneralSteps {
+    visit() {
         cy.visit(this.baseUrl + OverlappedElementPage.path)
         this.isOnOverlappedElementPage()
     }
 
-    isOnOverlappedElementPage(){
+    isOnOverlappedElementPage() {
         this.urlPathIs(OverlappedElementPage.path)
     }
 
-    scrollAndFillInName(name){
+    scrollAndFillInName(name) {
         OverlappedElementPage.getNameField.type(name)
     }
 
-    nameFieldValueIs(name){
+    nameFieldValueIs(name) {
         OverlappedElementPage.getNameField.invoke('val').should('eq', name)
     }
 }

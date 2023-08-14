@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { ajaxDataSteps } from "../../steps/ajax-data-steps";
+import {ajaxDataSteps} from "../../steps/ajax-data-steps";
 import ajaxRequestResponse from '../../fixtures/ajax-request.json';
 // import ajaxRequestResponse from '../fixtures/ajax-request-response.json' //to stub
 
@@ -20,6 +20,6 @@ describe('AJAX Data Page (browser ' + Cypress.browser.name + ', viewport ' + Cyp
         ajaxDataSteps.waitForAjaxResponse(15000)
         ajaxDataSteps.hasDataLoadMessage('Data loaded with AJAX get request.');
 
-  })
+    })
 
 })

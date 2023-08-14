@@ -1,5 +1,5 @@
 import VisibilityPage from "../pages/visibility-page";
-import { GeneralSteps, generalSteps } from "./general-steps";
+import {GeneralSteps} from "./general-steps";
 
 const isFullOverlap = (element1, element2) => {
 
@@ -16,26 +16,25 @@ const isFullOverlap = (element1, element2) => {
     return true
 }
 
-export class VisibilitySteps extends GeneralSteps
-{
+export class VisibilitySteps extends GeneralSteps {
     visit() {
         cy.visit(this.baseUrl + VisibilityPage.path)
         this.isOnVisibilityPage()
     }
 
-    isOnVisibilityPage(){
+    isOnVisibilityPage() {
         this.urlPathIs(VisibilityPage.path)
     }
 
-    clickHideBtn(){
+    clickHideBtn() {
         VisibilityPage.getHideBtn.click()
     }
 
-    zeroWidthBtnIsInvisible(){
+    zeroWidthBtnIsInvisible() {
         VisibilityPage.getZeroWidthBtn.should('not.be.visible')
     }
 
-    overlappedBtnIsOverlapped(){
+    overlappedBtnIsOverlapped() {
         VisibilityPage.getOverlapedBtn.should('be.visible')
         VisibilityPage.getHidingLayer.should('be.visible')
 
@@ -48,19 +47,19 @@ export class VisibilitySteps extends GeneralSteps
             })
     }
 
-    opacityZeroBtnIsInvisible(){
+    opacityZeroBtnIsInvisible() {
         VisibilityPage.getOpacityZeroBtn.should('not.be.visible')
     }
 
-    visibilityHiddenBtnIsInvisible(){
+    visibilityHiddenBtnIsInvisible() {
         VisibilityPage.getVisibilityHiddenBtn.should('not.be.visible')
     }
 
-    displayNoneBtnIsInvisible(){
+    displayNoneBtnIsInvisible() {
         VisibilityPage.getDisplayNoneBtn.should('not.be.visible')
     }
 
-    offscreenBtnIsOutsideViewport(){
+    offscreenBtnIsOutsideViewport() {
         VisibilityPage.getOffscreenBtn.isOutsideViewport()
     }
 

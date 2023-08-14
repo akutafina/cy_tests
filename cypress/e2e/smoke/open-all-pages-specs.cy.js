@@ -1,12 +1,12 @@
 /// <reference types="Cypress" />
 
-import { ajaxDataSteps } from "../../steps/ajax-data-steps";
-import { dynamicTableSteps } from "../../steps/dynamic-table-steps";
-import { overlappedElementSteps } from "../../steps/overlapped-element-steps";
-import { progressBarSteps } from "../../steps/progress-bar-steps";
+import {ajaxDataSteps} from "../../steps/ajax-data-steps";
+import {dynamicTableSteps} from "../../steps/dynamic-table-steps";
+import {overlappedElementSteps} from "../../steps/overlapped-element-steps";
+import {progressBarSteps} from "../../steps/progress-bar-steps";
 import {sampleAppSteps} from "../../steps/sample-app-steps";
-import { textInputSteps } from "../../steps/text-input-steps";
-import { visibilitySteps } from "../../steps/visibility-steps";
+import {textInputSteps} from "../../steps/text-input-steps";
+import {visibilitySteps} from "../../steps/visibility-steps";
 
 
 describe('Loads all the pages (browser: ' + Cypress.browser.name + ', viewport: ' + Cypress.config('viewportWidth') + 'x' + Cypress.config('viewportHeight') + ')', () => {

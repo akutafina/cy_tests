@@ -1,6 +1,6 @@
-import { GeneralPage } from "./general-page";
+import {GeneralPage} from "./general-page";
 
-class ProgressBarPage extends GeneralPage{
+class ProgressBarPage extends GeneralPage {
     static path = '/progressbar';
 
     static get getStartBtn() {
@@ -12,18 +12,18 @@ class ProgressBarPage extends GeneralPage{
     }
 
     static get getProgressBar() {
-        return  cy.get('#progressBar')
+        return cy.get('#progressBar')
     }
 
     static get getResultMessage() {
-        return  cy.get('#result')
+        return cy.get('#result')
     }
 
     static waitForProgressBarPercentage(testPercentage, timeout) {
-        cy.get('#progressBar',{timeout: timeout}).should(($div) => {
+        cy.get('#progressBar', {timeout: timeout}).should(($div) => {
             const n = parseFloat($div.text())
             expect(n).to.be.gte(testPercentage)
-         })
+        })
     }
 
 }

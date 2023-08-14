@@ -1,13 +1,13 @@
-import { GeneralPage } from "./general-page";
+import {GeneralPage} from "./general-page";
 
-class DynamicTablePage extends GeneralPage{
+class DynamicTablePage extends GeneralPage {
     static path = '/dynamictable';
 
-    static get getWarning(){
+    static get getWarning() {
         return cy.get('.bg-warning')
     }
 
-    static get getWarnValue(){
+    static get getWarnValue() {
 
         cy.get('.bg-warning')
             .invoke('text')

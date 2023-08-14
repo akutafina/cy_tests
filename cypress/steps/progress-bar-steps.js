@@ -1,14 +1,13 @@
 import ProgressBarPage from "../pages/progress-bar-page";
-import { GeneralSteps, generalSteps } from "./general-steps";
+import {GeneralSteps} from "./general-steps";
 
-export class ProgressBarSteps extends GeneralSteps
-{
+export class ProgressBarSteps extends GeneralSteps {
     visit() {
         cy.visit(this.baseUrl + ProgressBarPage.path)
         this.isOnProgressBarPage()
     }
 
-    isOnProgressBarPage(){
+    isOnProgressBarPage() {
         this.urlPathIs(ProgressBarPage.path)
     }
 

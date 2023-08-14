@@ -1,36 +1,34 @@
 import AjaxDataPage from "../pages/ajax-data-page";
-import { GeneralSteps, generalSteps } from "./general-steps";
+import {GeneralSteps} from "./general-steps";
 
 const ajaxRequestAlias = 'getAjaxData';
 
-export class AjaxDataSteps extends GeneralSteps
-{
-    visit(){
+export class AjaxDataSteps extends GeneralSteps {
+    visit() {
         cy.visit(this.baseUrl + AjaxDataPage.path)
         this.isOnAjaxDataPage(AjaxDataPage.path)
     }
 
-    isOnAjaxDataPage(){
+    isOnAjaxDataPage() {
         this.urlPathIs(AjaxDataPage.path)
     }
 
-    hasDataLoadMessage(message){
+    hasDataLoadMessage(message) {
         AjaxDataPage.getContentMessage.contains(message);
     }
 
-    clickTriggeringRequestBtn(){
+    clickTriggeringRequestBtn() {
         AjaxDataPage.getTriggeringRequestBtn.click()
     }
 
-    inteceptAjaxRequest(ajaxRequestResponse){
-        if(ajaxRequestResponse.request) {
+    inteceptAjaxRequest(ajaxRequestResponse) {
+        if (ajaxRequestResponse.request) {
             if (ajaxRequestResponse.response) {
                 return cy.intercept(
                     ajaxRequestResponse.request,
                     ajaxRequestResponse.response //stubbing
                 ).as(ajaxRequestAlias)
-            }
-            else{
+            } else {
                 return cy.intercept(
                     ajaxRequestResponse.request
                 ).as(ajaxRequestAlias)
@@ -38,7 +36,7 @@ export class AjaxDataSteps extends GeneralSteps
         }
     }
 
-    waitForAjaxResponse(timeout){
+    waitForAjaxResponse(timeout) {
         cy.waitForResponse('@' + ajaxRequestAlias, timeout)
     }
 
