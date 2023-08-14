@@ -1,4 +1,11 @@
 ### Cypress tests artefacts
 
+.idea
+
+.DS_Store
+**/.DS_Store
+
 cypress/downloads
 cypress/reports
+
+node_modules
