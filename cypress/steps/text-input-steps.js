@@ -9,8 +9,6 @@ export class TextInputSteps extends GeneralSteps {
 
     isOnTextInputPage() {
         this.urlPathIs(TextInputPage.path)
-        // cy.url().should('include', path)
-        //todo: improve matcher to the full match
     }
 
     fillInInputField(newBtnName) {

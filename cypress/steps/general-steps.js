@@ -17,7 +17,6 @@ export class GeneralSteps {
 
     urlPathIs(path) {
         cy.url().should('include', path)
-        //todo: improve matcher to the full match
     }
 
 }

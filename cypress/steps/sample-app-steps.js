@@ -4,14 +4,11 @@ import {GeneralSteps} from "./general-steps";
 export class SampleAppSteps extends GeneralSteps {
     visit() {
         cy.visit(this.baseUrl + SampleAppPage.path)
-        // cy.url().should('include', SampleAppPage.path)
         this.isOnSampleAppPage();
     }
 
     isOnSampleAppPage() {
         this.urlPathIs(SampleAppPage.path)
-        // cy.url().should('include', 'sampleapp')
-        //todo: improve matcher to the full match
     }
 
     fillInLoginForm(userName, password) {
