@@ -14,11 +14,12 @@ describe('Progress Bar Page (browser ' + Cypress.browser.name + ', viewport ' + 
 
     it('displays correct % in message when clicking Start > Stop at value', () => {
         const testPercentage = 75;
-        progressBarSteps.clickStart()
-        progressBarSteps.waitForProgressBarToReachPercentage(testPercentage, 30000)
-        progressBarSteps.clickStop()
-        progressBarSteps.progressBarPercentageIs(testPercentage)
-        progressBarSteps.resultIsNotGreaterThen(0)
+        const timeout = 30000;
+        progressBarSteps.clickStart();
+        progressBarSteps.waitForProgressBarToReachPercentage(testPercentage, timeout);
+        progressBarSteps.clickStop();
+        progressBarSteps.progressBarPercentageIs(testPercentage);
+        progressBarSteps.resultIsNotGreaterThen(0);
     })
 
 })
