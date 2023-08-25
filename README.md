@@ -102,7 +102,7 @@ Additionally, following set up **before ** script will set up a veiwport:
 In order for the [Login tests](cy_1/cy_tests_1/cypress/e2e/regression/sample_app.spec.cy.js) to pass, you will need to
 pass the test users' pwd.
 Then you can pass when running with a comand e.g.:
-`export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:smoke:local:chrome:1920x1080`
+`export CYPRESS_DEFAULT_USERS_PWD="pwd"; npm run test:e2e:regression:local:chrome:1920x1080`
 and add the param to the CI job properties later.
 
 ## Reporting

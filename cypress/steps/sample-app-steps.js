@@ -15,7 +15,7 @@ export class SampleAppSteps extends GeneralSteps {
 
         const password = Cypress.env('DEFAULT_USERS_PWD');
 
-        expect(username, 'username was set').to.be.a('string').and.not.be.empty
+        expect(userName, 'username was set').to.be.a('string').and.not.be.empty
         expect(password, 'password was set').to.be.a('string').and.not.be.empty
 
         SampleAppPage.getUserNameField.type(userName).should('have.value', userName);
